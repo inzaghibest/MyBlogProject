@@ -19,11 +19,11 @@ public class indexController {
         return "sdfsdf s + success";
     }
 
-    @RequestMapping("/login")
-    @ResponseBody
-    public String login() {
-        return "sdfsdf s + success";
-    }
+//    @RequestMapping("/login")
+//    @ResponseBody
+//    public String login() {
+//        return "sdfsdf s + success";
+//    }
 
 
     @RequestMapping(value = "/login-success")

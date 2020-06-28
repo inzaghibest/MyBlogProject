@@ -19,10 +19,11 @@ public class MyUserDetailsService implements UserDetailsService{
     private BlogUserMapper userMapper;
 
     @Override
-    public  UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
-        System.out.println("-----------loadUserByUsername----------");
+    public  UserDetails loadUserByUsername(String val1) throws UsernameNotFoundException {
+        System.out.println("-----------loadUserByUsername---------- name:" + val1);
+
         BlogUser blogUserDTO = new BlogUser();
-        blogUserDTO.setUserName(name);
+        blogUserDTO.setUserName(val1);
         BlogUser blogUser = userMapper.selectOne(blogUserDTO);
         if (blogUser == null)
         {
