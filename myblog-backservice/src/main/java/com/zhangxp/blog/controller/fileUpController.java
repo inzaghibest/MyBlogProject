@@ -46,33 +46,5 @@ public class fileUpController {
             list.add(filename);
         }
         return list;
-        //定义map存储返回结果集
-//        Map<String,String> returnfileMap = new HashMap<String, String>();
-//
-//        //获取前端上传的文件列表
-//        List<MultipartFile> files = ((MultipartHttpServletRequest)request).getFiles("file");
-//        System.out.println("----------------" + files.size() + "-------------------");
-//        MultipartFile file = null;
-//        return "success";
-
-//        MultipartFile file = imgFile.getMultipartFile();
-//        if (file.isEmpty()) {
-//            System.out.println("文件为空空");
-//        }
-//        String fileName = file.getOriginalFilename();  // 文件名
-//        String suffixName = fileName.substring(fileName.lastIndexOf("."));  // 后缀名
-//        String filePath = "M://temp-rainy//"; // 上传后的路径
-//        fileName = UUID.randomUUID() + suffixName; // 新文件名
-//        File dest = new File(filePath + fileName);
-//        if (!dest.getParentFile().exists()) {
-//            dest.getParentFile().mkdirs();
-//        }
-//        try {
-//            file.transferTo(dest);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        String filename = "M:/temp-rainy/" + fileName;
-//        return filename;
     }
 }

@@ -1,22 +1,46 @@
-//package com.zhangxp.blog.common;
-//
-//import java.util.HashMap;
-//
-///**
-// * Created by Administrator on 2020/6/25 0025.
-// * Result: 返回结果类
-// */
-//public class Result extends HashMap<String, Object>{
-//    public Result(int code = 200, String msg = "success") {
-//        put("code", code);
-//        put("msg", msg);
-//    }
-//
-//    public static Result ok() {
-//        return new Result();
-//    }
-//
-//    public static Result error(int code, String msg) {
-//        return
-//    }
-//}
+package com.zhangxp.blog.common;
+
+/**
+ * Created by zhangxp on 2020/6/28.
+ */
+public class Result<T> {
+
+    /**
+     * 错误码.
+     */
+    private long code;
+
+    /**
+     * 提示信息.
+     */
+    private String msg;
+
+    /**
+     * 具体的内容.
+     */
+    private T data;
+
+    public long getCode() {
+        return code;
+    }
+
+    public void setCode(long code) {
+        this.code = code;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+}
