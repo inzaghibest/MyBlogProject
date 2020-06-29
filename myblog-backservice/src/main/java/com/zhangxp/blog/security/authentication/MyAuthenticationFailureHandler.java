@@ -38,7 +38,7 @@ public class MyAuthenticationFailureHandler implements AuthenticationFailureHand
         } else if (e instanceof DisabledException) {
             result = ResultUtil.error(ResultCode.ERROR, "账户被禁用，登录失败，请联系管理员!");
         } else {
-            result = ResultUtil.error(ResultCode.ERROR, "登录失败:" + e.fillInStackTrace());
+            result = ResultUtil.error(ResultCode.ERROR, "登录失败:" +  "用户不存在!"/*e.fillInStackTrace()*/);
         }
         out.write(JSONObject.toJSONString(result));
         out.flush();

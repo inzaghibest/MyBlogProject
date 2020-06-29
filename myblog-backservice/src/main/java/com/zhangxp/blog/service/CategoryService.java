@@ -26,5 +26,5 @@ public class CategoryService {
         return arrayList;
     }
 
-    // 获取上级
+    // 根据id删除分类,删除
 }
