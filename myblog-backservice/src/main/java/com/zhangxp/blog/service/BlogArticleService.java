@@ -23,4 +23,11 @@ public class BlogArticleService {
         }
         return blogArticleMapper.insertSelective(blogArticle) > 0 ? true : false;
     }
+
+    public BlogArticle getArticle() {
+        BlogArticle blogArticleDTO = new BlogArticle();
+        blogArticleDTO.setId(22);
+        BlogArticle blogArticle = blogArticleMapper.selectByPrimaryKey(blogArticleDTO);
+        return blogArticle;
+    }
 }

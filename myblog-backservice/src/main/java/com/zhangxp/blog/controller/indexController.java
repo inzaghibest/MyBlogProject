@@ -83,13 +83,7 @@ public class indexController {
 //        return "test";
 //    }
 
-    @PostMapping(value = "/articles/add")
-    public String handleAddArticles(@RequestBody BlogArticle blogArticle)
-    {
-        System.out.print("------------handleAddArticles------------" + blogArticle.toString());
-        blogArticleService.insertArticle(blogArticle);
-        return "success";
-    }
+
 
 
 
